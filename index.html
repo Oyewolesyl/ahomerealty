@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="asset-status" data-asset-status aria-live="polite">Loading media</div>
     <header class="site-header" data-header>
       <a class="brand-mark" href="#top" aria-label="AHOME Realty home">
         <img
@@ -34,6 +35,7 @@
 
       <nav class="site-nav" data-nav aria-label="Primary navigation">
         <a href="#portfolio">Portfolio</a>
+        <a href="#media">Media</a>
         <a href="#services">Services</a>
         <a href="#studio">Studio</a>
         <a href="#contact">Contact</a>
@@ -48,6 +50,7 @@
         <div class="hero-scrim"></div>
         <div class="hero-content">
           <h1>Property sales, architectural renders, interiors, launch media.</h1>
+          <p class="tagline">Our Home</p>
           <p class="hero-copy">
             Sales presentation for residential developments, private homes, apartments, villas, and investor-facing
             property campaigns.
@@ -102,31 +105,61 @@
           <article class="property-card large">
             <img src="./assets/properties/residence-tower-01.png" alt="Modern luxury residential tower with warm facade lighting" />
             <div>
-              <span>Residential tower</span>
-              <h3>Vertical light, dark metal, stone facade</h3>
+              <h3>Residential tower</h3>
+              <p>Vertical lighting, dark metal, stone facade.</p>
             </div>
           </article>
           <article class="property-card">
             <img src="./assets/properties/classic-residence-02.png" alt="Classic luxury apartment building with arched balconies" />
             <div>
-              <span>Classic residence</span>
-              <h3>Limestone, bronze glow, formal entry</h3>
+              <h3>Classic residence</h3>
+              <p>Limestone, bronze glow, formal entry.</p>
             </div>
           </article>
           <article class="property-card">
             <img src="./assets/properties/terrace-residence-03.png" alt="Contemporary apartment residence with terraces and warm lighting" />
             <div>
-              <span>Terrace building</span>
-              <h3>Balconies, privacy screens, dusk finish</h3>
+              <h3>Terrace building</h3>
+              <p>Balconies, privacy screens, dusk finish.</p>
             </div>
           </article>
           <article class="property-card wide">
             <img src="./assets/properties/aerial-residence-d.png" alt="Aerial view of a finished luxury apartment building" />
             <div>
-              <span>Aerial view</span>
-              <h3>Complete massing and landscape context</h3>
+              <h3>Aerial view</h3>
+              <p>Complete massing and landscape context.</p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section class="section media-suite" id="media">
+        <div class="section-heading">
+          <p class="eyebrow">Media system</p>
+          <h2>Prepared for 3D viewing, aerial shots, and top-down media.</h2>
+        </div>
+        <div class="media-layout">
+          <article class="media-feature">
+            <img src="./assets/properties/aerial-residence-d.png" alt="Top aerial residential development view" />
+            <div>
+              <h3>3D property viewer</h3>
+              <p>Reserved structure for interactive building models, orbit views, unit selection, and walkthrough embeds.</p>
+            </div>
+          </article>
+          <div class="media-list">
+            <article>
+              <h3>Aerial media</h3>
+              <p>Drone stills, oblique views, approach shots, estate context, road access, and surrounding development shots.</p>
+            </article>
+            <article>
+              <h3>Top-down media</h3>
+              <p>Site plans, roof plans, floor plates, amenity mapping, compound circulation, and investor overview images.</p>
+            </article>
+            <article>
+              <h3>Interior walkthroughs</h3>
+              <p>Room-by-room media slots for living, kitchen, bedrooms, bathrooms, lobby, terraces, and show units.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -141,42 +174,36 @@
         </div>
         <div class="service-index" aria-label="AHOME Realty services">
           <article class="service-row">
-            <span>01</span>
             <div>
               <h3>Luxury property sales</h3>
               <p>Sales support for homes, apartments, villas, and residential developments.</p>
             </div>
           </article>
           <article class="service-row">
-            <span>02</span>
             <div>
               <h3>Architectural renders</h3>
               <p>Exterior renders from plans, site photos, sketches, construction images, or design references.</p>
             </div>
           </article>
           <article class="service-row">
-            <span>03</span>
             <div>
               <h3>Interior renders</h3>
               <p>Living rooms, bedrooms, kitchens, bathrooms, lobbies, penthouses, and show units.</p>
             </div>
           </article>
           <article class="service-row">
-            <span>04</span>
             <div>
               <h3>Before and after edits</h3>
               <p>Completed facade visuals with cladding, glazing, lighting, paving, and landscaping.</p>
             </div>
           </article>
           <article class="service-row">
-            <span>05</span>
             <div>
               <h3>Floor plan study</h3>
               <p>Room analysis, furniture logic, render angles, material direction, and presentation briefs.</p>
             </div>
           </article>
           <article class="service-row">
-            <span>06</span>
             <div>
               <h3>Developer launch media</h3>
               <p>Property films, listing visuals, sales decks, brochure sections, and launch assets.</p>
@@ -239,12 +266,15 @@
       </div>
       <div class="footer-links">
         <a href="#portfolio">Portfolio</a>
+        <a href="#media">Media</a>
         <a href="#services">Services</a>
         <a href="tel:+2348104180898" aria-label="Call AHOME Realty">Call</a>
         <a href="https://wa.me/2348104180898" aria-label="WhatsApp AHOME Realty" rel="noopener">WhatsApp</a>
         <a href="mailto:hello@ahomerealty.example">hello@ahomerealty.example</a>
       </div>
     </footer>
+
+    <button class="scroll-top" type="button" aria-label="Scroll to top" data-scroll-top>Top</button>
 
     <script src="./script.js"></script>
   </body>
