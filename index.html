@@ -3,21 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AHOME Realty | Luxury Real Estate Visuals</title>
+    <title>AHOME Realty | Luxury Real Estate Services</title>
     <meta
       name="description"
-      content="AHOME Realty presents luxury residences, finished architectural renders, and premium real estate media with a dark, refined visual identity."
+      content="AHOME Realty provides luxury property sales, property marketing, architectural renders, interior visualization, and developer launch media."
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="preload" as="image" href="./assets/brand/ahome-logo-gold-dark.png" />
+    <link rel="preload" as="image" href="./assets/brand/ahome-logo-gold-dark.svg" />
     <link rel="preload" as="image" href="./assets/properties/estate-approach-05.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header" data-header>
       <a class="brand-mark" href="#top" aria-label="AHOME Realty home">
-        <img src="./assets/brand/ahome-logo-gold-dark.png" alt="AHOME Realty" />
+        <img
+          src="./assets/brand/ahome-logo-gold-dark.svg"
+          alt="AHOME Realty"
+          data-logo
+          data-dark-logo="./assets/brand/ahome-logo-gold-dark.svg"
+          data-light-logo="./assets/brand/ahome-logo-black-light.svg"
+        />
       </a>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" data-theme-toggle>Light</button>
 
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
         <span></span>
@@ -26,7 +34,7 @@
 
       <nav class="site-nav" data-nav aria-label="Primary navigation">
         <a href="#portfolio">Portfolio</a>
-        <a href="#renders">Renders</a>
+        <a href="#services">Services</a>
         <a href="#studio">Studio</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -39,51 +47,50 @@
         </div>
         <div class="hero-scrim"></div>
         <div class="hero-content">
-          <img class="hero-logo" src="./assets/brand/ahome-logo-gold-dark.png" alt="AHOME Realty" />
-          <p class="eyebrow">Private residences, finished visuals, exacting presentation</p>
-          <h1>Luxury real estate media with a calm architectural eye.</h1>
+          <p class="eyebrow">AHOME Realty</p>
+          <h1>Luxury property sales and architectural visualization.</h1>
           <p class="hero-copy">
-            AHOME Realty builds every presentation around finished, believable spaces: warm stone, dark metal,
-            champagne light, disciplined camera angles, and property imagery that feels ready for a serious client.
+            AHOME Realty handles premium property marketing, realistic renders, listing presentation, and
+            developer launch visuals for high-value residential projects.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#portfolio">View properties</a>
-            <a class="button ghost" href="#renders">Render direction</a>
+            <a class="button ghost" href="#services">Services</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="Featured property details">
-          <span>Featured direction</span>
-          <strong>Dark luxury residential campaign</strong>
-          <p>Exterior, interior, aerial, and brand film assets arranged for high-end developer presentation.</p>
+          <span>Core services</span>
+          <strong>Sales. CGI. Interiors. Launches.</strong>
+          <p>Direct services for developers, private sellers, agents, and serious buyers.</p>
         </aside>
       </section>
 
       <section class="brand-strip" aria-label="Brand mood">
         <div>
           <span>01</span>
-          <p>Black and charcoal base</p>
+          <p>Property sales</p>
         </div>
         <div>
           <span>02</span>
-          <p>Champagne logo accent</p>
+          <p>Architectural renders</p>
         </div>
         <div>
           <span>03</span>
-          <p>Warm architectural imagery</p>
+          <p>Developer launch media</p>
         </div>
         <div>
           <span>04</span>
-          <p>Editorial real estate rhythm</p>
+          <p>Interior visualization</p>
         </div>
       </section>
 
       <section class="section split" id="studio">
         <div class="section-copy">
           <p class="eyebrow">Brand identity</p>
-          <h2>The logo sets the mood. The site follows it.</h2>
+          <h2>Brand films and presentation assets for property launches.</h2>
           <p>
-            The official gold-on-dark mark leads the experience across the header, mobile menu, footer, and hero.
-            Light logo usage is reserved for pale editorial panels only, without redrawing or replacing the mark.
+            Logo animation, property videos, launch visuals, sales pages, image banks, and investor-facing
+            presentation assets.
           </p>
         </div>
         <div class="identity-grid">
@@ -94,7 +101,7 @@
               muted
               loop
               playsinline
-              poster="./assets/brand/ahome-logo-gold-dark.png"
+              poster="./assets/brand/ahome-logo-gold-dark.svg"
               aria-label="AHOME Realty brand identity animation"
             ></video>
           </div>
@@ -105,7 +112,7 @@
               muted
               loop
               playsinline
-              poster="./assets/brand/ahome-logo-gold-dark.png"
+              poster="./assets/brand/ahome-logo-gold-dark.svg"
               aria-label="AHOME Realty logo animation"
             ></video>
           </div>
@@ -115,7 +122,7 @@
       <section class="section portfolio" id="portfolio">
         <div class="section-heading">
           <p class="eyebrow">Selected property imagery</p>
-          <h2>Residences presented like luxury media, not a portal.</h2>
+          <h2>Property visuals for sales campaigns and investor presentations.</h2>
         </div>
         <div class="portfolio-grid">
           <article class="property-card large">
@@ -149,29 +156,45 @@
         </div>
       </section>
 
-      <section class="section render-direction" id="renders">
+      <section class="section services" id="services">
         <div class="section-copy">
-          <p class="eyebrow">Render standard</p>
-          <h2>Finished means finished.</h2>
+          <p class="eyebrow">Services</p>
+          <h2>Services</h2>
           <p>
-            Every visual direction is built around completed architecture: no scaffold, no construction clutter,
-            no temporary fencing, no invented signage. The building geometry, camera logic, lighting, and materials
-            have to feel achievable by top contractors in Nigeria.
+            No filler. These are the core services.
           </p>
         </div>
-        <div class="render-list">
-          <div>
-            <span></span>
-            <p>Preserve the architecture, proportions, floor count, and camera angle.</p>
-          </div>
-          <div>
-            <span></span>
-            <p>Finish facades with stone, bronze metal, black aluminium, glass, and warm 3000K lighting.</p>
-          </div>
-          <div>
-            <span></span>
-            <p>Use realistic landscape, paving, reflections, shadows, and residential scale.</p>
-          </div>
+        <div class="service-grid">
+          <article>
+            <span>01</span>
+            <h3>Luxury property sales</h3>
+            <p>Premium residential sales support for homes, apartments, villas, and new developments.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Architectural CGI renders</h3>
+            <p>Exterior renders from plans, site photos, sketches, construction images, or design references.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Interior visualization</h3>
+            <p>Living rooms, bedrooms, kitchens, bathrooms, lobbies, penthouses, and show units.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Before and after property edits</h3>
+            <p>Completed facade visuals with cladding, glazing, lighting, paving, and landscaping.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Floor plan study</h3>
+            <p>Room analysis, furniture logic, render angles, material direction, and presentation briefs.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Developer launch media</h3>
+            <p>Brand films, listing visuals, sales decks, brochure sections, and social launch assets.</p>
+          </article>
         </div>
       </section>
 
@@ -181,10 +204,10 @@
         </div>
         <div class="showcase-copy">
           <p class="eyebrow">Interior mood</p>
-          <h2>Warm, architectural, restrained.</h2>
+          <h2>Interior renders that sell the space.</h2>
           <p>
-            Interiors lean into stone floors, walnut joinery, low gold light, black rails, quiet furniture, and
-            enough negative space for the property to breathe.
+            Furniture layout, realistic lighting, stone finishes, walnut joinery, black metal details, and luxury
+            styling that still looks buildable.
           </p>
         </div>
       </section>
@@ -195,10 +218,10 @@
         </div>
         <div class="gallery-copy">
           <p class="eyebrow">Campaign image bank</p>
-          <h2>Sorted visual assets for exterior, arrival, and suite stories.</h2>
+          <h2>Exterior, arrival, suite, and interior campaign images.</h2>
           <p>
-            The imagery is arranged by use: hero exteriors, architectural detail, arrival moments, interiors, and
-            intimate suite views.
+            Use the right image for the right sales moment: hero facade, estate approach, arrival, interior, suite,
+            balcony, and aerial context.
           </p>
           <div class="thumb-row" aria-label="Choose gallery image">
             <button type="button" class="thumb active" data-gallery="./assets/properties/villa-front-07.jpg" aria-label="Show villa facade">
@@ -216,28 +239,22 @@
           </div>
         </div>
       </section>
-
-      <section class="light-panel" aria-label="Light logo usage">
-        <div>
-          <p class="eyebrow">Secondary mark</p>
-          <h2>Used only when the section turns light.</h2>
-          <p>
-            This is the only pale section in the system, included to show correct secondary-logo behavior without
-            changing the brand's default dark direction.
-          </p>
-        </div>
-        <img src="./assets/brand/ahome-logo-black-light.png" alt="AHOME Realty black logo on light background" />
-      </section>
     </main>
 
     <footer class="site-footer" id="contact">
       <div>
-        <img src="./assets/brand/ahome-logo-gold-dark.png" alt="AHOME Realty" />
-        <p>Premium real estate presentation, architectural visual direction, and finished property media.</p>
+        <img
+          src="./assets/brand/ahome-logo-gold-dark.svg"
+          alt="AHOME Realty"
+          data-logo
+          data-dark-logo="./assets/brand/ahome-logo-gold-dark.svg"
+          data-light-logo="./assets/brand/ahome-logo-black-light.svg"
+        />
+        <p>Luxury property sales, architectural CGI, interior visualization, and developer launch media.</p>
       </div>
       <div class="footer-links">
         <a href="#portfolio">Portfolio</a>
-        <a href="#renders">Render standard</a>
+        <a href="#services">Services</a>
         <a href="mailto:hello@ahomerealty.example">hello@ahomerealty.example</a>
       </div>
     </footer>
