@@ -1,4 +1,6 @@
 :root {
+  --font-display: Jost, "Helvetica Neue", Arial, sans-serif;
+  --font-body: Manrope, "Helvetica Neue", Arial, sans-serif;
   --black: #050403;
   --charcoal: #0d0c0a;
   --charcoal-2: #15120f;
@@ -44,12 +46,10 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--ivory);
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
-}
-
-body.menu-open {
-  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
 img,
@@ -98,9 +98,10 @@ body.light-mode .site-nav {
   align-items: center;
   gap: clamp(18px, 3vw, 34px);
   color: rgba(242, 234, 220, 0.78);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -144,7 +145,7 @@ body.light-mode .site-nav {
   border-radius: 0;
   background: transparent;
   color: var(--gold);
-  font: inherit;
+  font-family: var(--font-display);
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -193,17 +194,22 @@ body.light-mode .theme-toggle {
 .tagline {
   margin: 0 0 20px;
   color: var(--gold-soft);
-  font-family: Didot, "Bodoni 72", "Bodoni MT", Georgia, serif;
-  font-size: clamp(1.35rem, 2.3vw, 2.6rem);
-  line-height: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.55vw, 1.65rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.08;
+  text-wrap: balance;
+  text-transform: uppercase;
 }
 
 .eyebrow {
   margin: 0 0 16px;
   color: var(--gold-soft);
+  font-family: var(--font-display);
   font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -216,39 +222,46 @@ p {
 
 h1,
 h2 {
-  font-family: Didot, "Bodoni 72", "Bodoni MT", Georgia, serif;
-  font-weight: 400;
-  line-height: 0.98;
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.04;
+  text-wrap: balance;
 }
 
 h1 {
   max-width: 860px;
   margin-bottom: 24px;
-  font-size: clamp(3rem, 5.2vw, 5.7rem);
+  font-size: clamp(2.75rem, 4.25vw, 4.85rem);
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 24px;
-  font-size: clamp(2.35rem, 4.2vw, 4.8rem);
+  font-size: clamp(2rem, 3.2vw, 3.75rem);
   letter-spacing: 0;
 }
 
 h3 {
   margin-bottom: 0;
-  font-family: Didot, "Bodoni 72", "Bodoni MT", Georgia, serif;
-  font-size: clamp(1.28rem, 2vw, 2rem);
-  font-weight: 400;
-  line-height: 1.08;
+  font-family: var(--font-display);
+  font-size: clamp(1.18rem, 1.55vw, 1.72rem);
+  font-weight: 500;
+  line-height: 1.18;
+  text-wrap: balance;
 }
 
 .hero-copy,
 .section-copy p,
 .gallery-copy p,
 .showcase-copy p,
-.site-footer p {
+.site-footer p,
+.service-row p,
+.media-feature p,
+.media-list p {
   color: var(--muted);
   font-size: clamp(1rem, 1.5vw, 1.16rem);
+  line-height: 1.62;
+  text-wrap: pretty;
 }
 
 .hero-copy {
@@ -270,6 +283,7 @@ h3 {
   padding: 13px 22px;
   border: 1px solid var(--line);
   border-radius: 0;
+  font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -295,6 +309,7 @@ h3 {
 
 .property-card span {
   color: var(--gold);
+  font-family: var(--font-display);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -308,6 +323,10 @@ h3 {
 
 .section {
   padding: clamp(78px, 10vw, 140px) clamp(20px, 5vw, 76px);
+}
+
+section[id] {
+  scroll-margin-top: 92px;
 }
 
 .split {
@@ -324,6 +343,7 @@ h3 {
 .identity-grid {
   display: grid;
   gap: 16px;
+  max-width: 760px;
 }
 
 .identity-frame {
@@ -335,15 +355,6 @@ h3 {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-}
-
-.identity-frame.compact {
-  justify-self: end;
-  width: min(62%, 420px);
-}
-
-.identity-frame.compact video {
-  aspect-ratio: 16 / 9;
 }
 
 .section-heading {
@@ -501,6 +512,7 @@ body.light-mode .media-suite {
 .services-visual figcaption {
   padding: 14px 16px;
   color: var(--gold);
+  font-family: var(--font-display);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -513,7 +525,7 @@ body.light-mode .media-suite {
 
 .service-row {
   display: block;
-  padding: 30px 0;
+  padding: 26px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -523,7 +535,7 @@ body.light-mode .media-suite {
 
 .service-row h3 {
   margin-bottom: 12px;
-  font-size: clamp(1.7rem, 3vw, 3.4rem);
+  font-size: clamp(1.45rem, 2.05vw, 2.35rem);
 }
 
 .asset-status {
@@ -535,6 +547,7 @@ body.light-mode .media-suite {
   border: 1px solid var(--line);
   background: rgba(5, 4, 3, 0.84);
   color: var(--gold);
+  font-family: var(--font-display);
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.14em;
@@ -557,7 +570,7 @@ body.light-mode .media-suite {
   border: 1px solid var(--line);
   background: rgba(5, 4, 3, 0.84);
   color: var(--gold);
-  font: inherit;
+  font-family: var(--font-display);
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -575,6 +588,7 @@ body.light-mode .media-suite {
   color: var(--muted);
   font-size: clamp(1rem, 1.35vw, 1.12rem);
   line-height: 1.55;
+  text-wrap: pretty;
 }
 
 .showcase {
@@ -602,6 +616,57 @@ body.light-mode .media-suite {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
   gap: clamp(28px, 5vw, 64px);
   align-items: center;
+}
+
+.contact-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: stretch;
+  padding: 0 clamp(20px, 5vw, 76px) clamp(70px, 8vw, 110px);
+  background: var(--black);
+}
+
+.image-cta {
+  display: block;
+  max-width: 1324px;
+  border: 1px solid var(--line-soft);
+  overflow: hidden;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.image-cta:hover,
+.image-cta:focus-visible {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.image-cta img {
+  width: 100%;
+  min-height: 132px;
+  object-fit: cover;
+}
+
+.contact-call {
+  display: grid;
+  min-width: 132px;
+  padding-inline: 24px;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.contact-call:hover,
+.contact-call:focus-visible {
+  border-color: var(--gold-soft);
+  background: var(--gold-soft);
+  color: #130f0a;
 }
 
 .gallery-main {
@@ -680,6 +745,11 @@ body.light-mode .site-footer {
   gap: 18px 28px;
   align-content: start;
   color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .footer-links a:hover,
@@ -707,6 +777,7 @@ body.light-mode .site-footer {
     border: 1px solid var(--line);
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   body.light-mode .menu-toggle {
@@ -717,6 +788,15 @@ body.light-mode .site-footer {
     width: 18px;
     height: 1px;
     background: var(--gold);
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  body.menu-open .menu-toggle span:first-child {
+    transform: translateY(4px) rotate(42deg);
+  }
+
+  body.menu-open .menu-toggle span:last-child {
+    transform: translateY(-4px) rotate(-42deg);
   }
 
   .theme-toggle {
@@ -726,25 +806,34 @@ body.light-mode .site-footer {
 
   .site-nav {
     position: fixed;
-    top: 72px;
-    left: 0;
-    right: 0;
+    top: 84px;
+    right: 16px;
+    left: auto;
     bottom: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: rgba(5, 4, 3, 0.96);
-    border-bottom: 1px solid var(--line);
-    transform: translateY(-130%);
-    transition: transform 240ms ease;
-    font-size: 0.82rem;
+    display: grid;
+    width: min(280px, calc(100vw - 32px));
+    padding: 10px;
+    gap: 2px;
+    background: rgba(8, 7, 6, 0.96);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
   }
 
   .site-nav a {
-    padding: 18px;
-    border-top: 1px solid var(--line);
+    padding: 13px 14px;
+    border-top: 0;
+    border-bottom: 1px solid var(--line-soft);
     text-align: left;
+  }
+
+  .site-nav a:last-child {
+    border-bottom: 0;
   }
 
   body.light-mode .site-nav {
@@ -752,6 +841,8 @@ body.light-mode .site-footer {
   }
 
   body.menu-open .site-nav {
+    opacity: 1;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
@@ -793,6 +884,19 @@ body.light-mode .site-footer {
     aspect-ratio: 4 / 5;
   }
 
+  .contact-actions {
+    grid-template-columns: 1fr;
+    padding-inline: 18px;
+  }
+
+  .image-cta img {
+    min-height: 126px;
+  }
+
+  .contact-call {
+    min-height: 50px;
+  }
+
   .services-intro {
     position: static;
   }
@@ -813,10 +917,6 @@ body.light-mode .site-footer {
     justify-content: flex-start;
   }
 
-  .identity-frame.compact {
-    justify-self: stretch;
-    width: 100%;
-  }
 }
 
 @media (max-width: 620px) {
@@ -829,7 +929,21 @@ body.light-mode .site-footer {
   }
 
   h1 {
-    font-size: clamp(2.7rem, 14vw, 4.7rem);
+    font-size: clamp(2.45rem, 10.4vw, 3.72rem);
+    line-height: 1.06;
+  }
+
+  h2 {
+    font-size: clamp(1.9rem, 8vw, 2.75rem);
+  }
+
+  .hero-copy,
+  .section-copy p,
+  .gallery-copy p,
+  .showcase-copy p,
+  .service-row p,
+  .media-list p {
+    font-size: 1rem;
   }
 
   .hero-actions,
@@ -867,5 +981,37 @@ body.light-mode .site-footer {
 
   .site-footer {
     padding-inline: 18px;
+  }
+
+  .site-footer {
+    justify-items: center;
+    gap: 28px;
+    padding-block: 46px 58px;
+    text-align: center;
+  }
+
+  .site-footer img {
+    width: 190px;
+    margin-inline: auto;
+  }
+
+  .site-footer p {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    width: min(100%, 340px);
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    display: grid;
+    min-height: 44px;
+    place-items: center;
+    border: 1px solid var(--line-soft);
   }
 }

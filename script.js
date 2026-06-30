@@ -4,8 +4,15 @@ const galleryMain = document.querySelector("[data-gallery-main]");
 const thumbs = [...document.querySelectorAll("[data-gallery]")];
 const themeButton = document.querySelector("[data-theme-toggle]");
 const logos = [...document.querySelectorAll("[data-logo]")];
+const buyArt = document.querySelector("[data-buy-art]");
 const assetStatus = document.querySelector("[data-asset-status]");
 const scrollTopButton = document.querySelector("[data-scroll-top]");
+
+const setMenuOpen = (isOpen) => {
+  document.body.classList.toggle("menu-open", isOpen);
+  menuButton?.setAttribute("aria-expanded", String(isOpen));
+  menuButton?.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+};
 
 const setTheme = (mode) => {
   const isLight = mode === "light";
@@ -15,12 +22,14 @@ const setTheme = (mode) => {
   logos.forEach((logo) => {
     logo.src = isLight ? logo.dataset.lightLogo : logo.dataset.darkLogo;
   });
+  if (buyArt instanceof HTMLImageElement) {
+    buyArt.src = isLight ? buyArt.dataset.lightSrc : buyArt.dataset.darkSrc;
+  }
   localStorage.setItem("ahome-theme", mode);
 };
 
 menuButton?.addEventListener("click", () => {
-  const isOpen = document.body.classList.toggle("menu-open");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
+  setMenuOpen(!document.body.classList.contains("menu-open"));
 });
 
 setTheme(localStorage.getItem("ahome-theme") || "dark");
@@ -31,9 +40,18 @@ themeButton?.addEventListener("click", () => {
 
 nav?.addEventListener("click", (event) => {
   if (event.target instanceof HTMLAnchorElement) {
-    document.body.classList.remove("menu-open");
-    menuButton?.setAttribute("aria-expanded", "false");
+    setMenuOpen(false);
   }
+});
+
+document.addEventListener("click", (event) => {
+  if (!document.body.classList.contains("menu-open")) return;
+  if (event.target instanceof Node && (nav?.contains(event.target) || menuButton?.contains(event.target))) return;
+  setMenuOpen(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenuOpen(false);
 });
 
 thumbs.forEach((thumb) => {

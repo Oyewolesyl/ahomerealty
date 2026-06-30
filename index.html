@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AHOME Realty | Luxury Real Estate Services</title>
+    <title>AHOME Realty | Real Estate Presentation</title>
     <meta
       name="description"
       content="AHOME Realty provides property sales support, architectural renders, interior renders, floor plan review, and launch presentation for residential developments."
     />
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/brand/ahome-logo-gold-dark.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="./assets/brand/ahome-logo-gold-dark.svg" />
     <link rel="preload" as="image" href="./assets/properties/estate-approach-05.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -45,15 +51,14 @@
     <main id="top">
       <section class="hero" aria-label="AHOME Realty introduction">
         <div class="hero-media">
-          <img src="./assets/properties/estate-approach-05.png" alt="Luxury residential estate at dusk" />
+          <img src="./assets/properties/estate-approach-05.png" alt="Residential estate at dusk" />
         </div>
         <div class="hero-scrim"></div>
         <div class="hero-content">
           <h1>Property sales, architectural renders, interiors, launch media.</h1>
           <p class="tagline">Our Home</p>
           <p class="hero-copy">
-            Sales presentation for residential developments, private homes, apartments, villas, and investor-facing
-            property campaigns.
+            Sales presentation for residential developments, private homes, apartments, villas, and investor campaigns.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#portfolio">View properties</a>
@@ -82,17 +87,6 @@
               aria-label="AHOME Realty brand identity animation"
             ></video>
           </div>
-          <div class="identity-frame compact">
-            <video
-              src="./assets/video/ahome-logo-animation.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              poster="./assets/brand/ahome-logo-gold-dark.svg"
-              aria-label="AHOME Realty logo animation"
-            ></video>
-          </div>
         </div>
       </section>
 
@@ -103,14 +97,14 @@
         </div>
         <div class="portfolio-grid">
           <article class="property-card large">
-            <img src="./assets/properties/residence-tower-01.png" alt="Modern luxury residential tower with warm facade lighting" />
+            <img src="./assets/properties/residence-tower-01.png" alt="Modern residential tower with warm facade lighting" />
             <div>
               <h3>Residential tower</h3>
               <p>Vertical lighting, dark metal, stone facade.</p>
             </div>
           </article>
           <article class="property-card">
-            <img src="./assets/properties/classic-residence-02.png" alt="Classic luxury apartment building with arched balconies" />
+            <img src="./assets/properties/classic-residence-02.png" alt="Classic apartment building with arched balconies" />
             <div>
               <h3>Classic residence</h3>
               <p>Limestone, bronze glow, formal entry.</p>
@@ -124,7 +118,7 @@
             </div>
           </article>
           <article class="property-card wide">
-            <img src="./assets/properties/aerial-residence-d.png" alt="Aerial view of a finished luxury apartment building" />
+            <img src="./assets/properties/aerial-residence-d.png" alt="Aerial view of a finished apartment building" />
             <div>
               <h3>Aerial view</h3>
               <p>Complete massing and landscape context.</p>
@@ -168,14 +162,14 @@
           <p class="eyebrow">Services</p>
           <h2>What we handle.</h2>
           <figure class="services-visual">
-            <img src="./assets/properties/grand-interior-04.png" alt="Luxury interior visualization for property sales" />
+            <img src="./assets/properties/grand-interior-04.png" alt="Interior visualization for property sales" />
             <figcaption>Interior render and sales presentation direction.</figcaption>
           </figure>
         </div>
         <div class="service-index" aria-label="AHOME Realty services">
           <article class="service-row">
             <div>
-              <h3>Luxury property sales</h3>
+              <h3>Property sales</h3>
               <p>Sales support for homes, apartments, villas, and residential developments.</p>
             </div>
           </article>
@@ -214,7 +208,7 @@
 
       <section class="showcase" aria-label="Interior and exterior showcase">
         <div class="showcase-media">
-          <img src="./assets/properties/grand-interior-04.png" alt="Grand warm luxury living room with chandelier and staircase" />
+          <img src="./assets/properties/grand-interior-04.png" alt="Grand warm living room with chandelier and staircase" />
         </div>
         <div class="showcase-copy">
           <p class="eyebrow">Interior mood</p>
@@ -227,7 +221,7 @@
 
       <section class="section gallery" aria-label="Property media gallery">
         <div class="gallery-main">
-          <img src="./assets/properties/villa-front-07.jpg" alt="Luxury villa facade at dusk" data-gallery-main />
+          <img src="./assets/properties/villa-front-07.jpg" alt="Villa facade at dusk" data-gallery-main />
         </div>
         <div class="gallery-copy">
           <p class="eyebrow">Campaign image bank</p>
@@ -251,6 +245,24 @@
           </div>
         </div>
       </section>
+
+      <section class="contact-actions" aria-label="Contact AHOME Realty">
+        <a
+          class="image-cta"
+          href="https://wa.me/2348104190898"
+          aria-label="Enquire about buying with AHOME Realty on WhatsApp"
+          rel="noopener"
+        >
+          <img
+            src="./assets/brand/buy-ahome-dark.svg"
+            alt="Buy AHOME"
+            data-buy-art
+            data-dark-src="./assets/brand/buy-ahome-dark.svg"
+            data-light-src="./assets/brand/buy-ahome-light.svg"
+          />
+        </a>
+        <a class="contact-call" href="tel:+2348104190898" aria-label="Call AHOME Realty">Call</a>
+      </section>
     </main>
 
     <footer class="site-footer" id="contact">
@@ -270,7 +282,6 @@
         <a href="#services">Services</a>
         <a href="tel:+2348104190898" aria-label="Call AHOME Realty">Call</a>
         <a href="https://wa.me/2348104190898" aria-label="WhatsApp AHOME Realty" rel="noopener">WhatsApp</a>
-        <a href="mailto:hello@ahomerealty.example">hello@ahomerealty.example</a>
       </div>
     </footer>
 
